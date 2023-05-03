@@ -9,10 +9,8 @@ namespace HangFire.Controllers
     {
         private readonly IBackgroundJobClient _backgroundJobs;
 
-        public HomeController(IBackgroundJobClient backgroundJobs)
-        {
+        public HomeController(IBackgroundJobClient backgroundJobs) => 
             _backgroundJobs = backgroundJobs;
-        }
 
         [HttpGet]
         public IActionResult Index()
